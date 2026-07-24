@@ -1,0 +1,151 @@
+.navbar-brand img {
+  transition: transform 0.2s ease;
+}
+.navbar {
+  background-color: #1e1e1e;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.navbar-brand {
+  letter-spacing: 0.03em;
+}
+
+/* ===== Dark theme base ===== */
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* ===== Card styling ===== */
+.card {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(255, 255, 255, 0.12), 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Text areas and dropdowns inside the dark cards */
+.card .form-control,
+.card .form-select {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
+}
+
+.card .form-control::placeholder {
+  color: #888;
+}
+
+.card .form-control:focus,
+.card .form-select:focus {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #6c9dff;
+  box-shadow: 0 0 0 0.2rem rgba(108, 157, 255, 0.25);
+}
+
+/* Swap button glow on hover */
+#swapBtn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#swapBtn:hover {
+  transform: rotate(180deg);
+  box-shadow: 0 0 15px rgba(108, 157, 255, 0.6);
+}
+
+
+
+
+/* ===== Responsive: Tablets (768px and below) ===== */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    margin-bottom: 0.5rem;
+  }
+
+  .card:hover {
+    transform: translateY(-6px); /* smaller lift on smaller screens */
+  }
+}
+
+/* ===== Responsive: Phones (576px and below) ===== */
+@media (max-width: 576px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  textarea.form-control {
+    font-size: 0.95rem;
+  }
+
+  /* Swap button: since Bootstrap stacks the columns on phones,
+     rotate it to look right pointing down instead of sideways */
+  #swapBtn {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem auto;
+    transform: rotate(90deg);
+  }
+
+  #swapBtn:hover {
+    transform: rotate(270deg);
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+  }
+}
+
+/* ===== Responsive: Very small phones (400px and below) ===== */
+@media (max-width: 400px) {
+  .navbar-brand span,
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  textarea.form-control {
+    min-height: 140px;
+  }
+}
+
+/* ===== Responsive: Large screens (1200px and above) — subtle refinement ===== */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
